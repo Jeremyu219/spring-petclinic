@@ -102,7 +102,7 @@ pipeline {
  stage('Analysis with SonarQube') {
             steps {
                 echo 'Run sonarQube Analysis'
-                withSonarQubeEnv(installationName : 'sonarServer' , credentialsId : 'cred4sonarqube') 
+                withSonarQubeEnv(installationName : 'SonarServer' , credentialsId : 'cred4sonarqube') 
                 {
                     sh "mvn clean package sonar:sonar"
                     }
